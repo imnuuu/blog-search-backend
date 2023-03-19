@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DATASOURCE_URL}/blogservice?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=true&cacheDefaultTimezone=false
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+  flyway:
+    enabled: ${FLYWAY_ENABLED:true}
+    baseline-on-migrate: ${FLYWAY_ENABLED:true}
+  security:
+    allowed-origin: ${ALLOWED_ORIGIN:}
+    csrf:
+      enabled: false
+    hsts:
+      enabled: true]
+logging:
+  level:
+    com.kakao.blog: DEBUG

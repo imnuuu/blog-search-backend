@@ -1,0 +1,39 @@
+server:
+  port: 8084
+spring:
+  profiles:
+    active: local
+    default: local
+external-api:
+  kakao:
+    base-url: ${KAKAO_BASE_URL:https://dapi.kakao.com}
+    api-key: ${KAKAO_API_KEY:75f5e1bba96d5ab6a5d76cffbeb07ccd}
+  naver:
+    base-url: ${NAVER_BASE_URL:https://openapi.naver.com}
+    client-id: ${NAVER_CLIENT_ID:dTftgh_8NHJ9xE5nVN2D}
+    client-secret: ${NAVER_CLIENT_SECRET:40jI7Yh7qZ}
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    groups-order: DESC
+    operationsSorter: method
+    disable-swagger-default-url: true
+    display-request-duration: true
+    use-root-path: true
+  api-docs:
+    groups:
+      enabled: true
+    enabled: true
+  packages-to-scan: com.kakao.blog
+management:
+  endpoints:
+    web:
+      base-path: /
+      path-mapping:
+        prometheus: /metrics
+        health: /health
+      exposure:
+        include: info, prometheus, health
+  health:
+    status:
+      http-mapping.UP: 200

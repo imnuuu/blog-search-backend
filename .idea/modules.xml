@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/blog-api/blog-search-backend.blog-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/blog-api/blog-search-backend.blog-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/blog-api/blog-search-backend.blog-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/blog-api/blog-search-backend.blog-api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/blog-domain/blog-search-backend.blog-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/blog-domain/blog-search-backend.blog-domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/blog-domain/blog-search-backend.blog-domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/blog-domain/blog-search-backend.blog-domain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/blog-keyword/blog-search-backend.blog-keyword.main.iml" filepath="$PROJECT_DIR$/.idea/modules/blog-keyword/blog-search-backend.blog-keyword.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/blog-keyword/blog-search-backend.blog-keyword.test.iml" filepath="$PROJECT_DIR$/.idea/modules/blog-keyword/blog-search-backend.blog-keyword.test.iml" />
+    </modules>
+  </component>
+</project>

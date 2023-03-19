@@ -1,0 +1,35 @@
+server:
+  port: 8085
+spring:
+  profiles:
+    active: local
+    default: local
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+  flyway:
+    enabled: ${FLYWAY_ENABLED:false}
+    baseline-on-migrate: ${FLYWAY_ENABLED:false}
+    locations: classpath:db/migration
+  jpa:
+    hibernate:
+      ddl-auto: none
+management:
+  endpoints:
+    web:
+      base-path: /
+      path-mapping:
+        prometheus: /metrics
+        health: /health
+      exposure:
+        include: info, prometheus, health
+  health:
+    status:
+      http-mapping.UP: 200

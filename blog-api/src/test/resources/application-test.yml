@@ -1,0 +1,34 @@
+spring:
+  security:
+    allowed-origin: ${ALLOWED_ORIGIN:http://localhost:3000}
+    csrf:
+      enabled: false
+    hsts:
+      enabled: false
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
+logging:
+  level:
+    com.kakao.blog: DEBUG
+management:
+  endpoints:
+    web:
+      base-path: /
+      path-mapping:
+        health: /health
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    groups-order: DESC
+    operationsSorter: method
+    disable-swagger-default-url: true
+    display-request-duration: true
+    use-root-path: true
+  api-docs:
+    groups:
+      enabled: true
+    enabled: true
+  packages-to-scan: com.kakao.blog

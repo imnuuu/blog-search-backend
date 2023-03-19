@@ -1,0 +1,11 @@
+# Project exclude paths
+/.gradle/
+/blog-api/build/
+/blog-api/out/production/classes/
+/blog-api/out/test/classes/
+/blog-domain/build/
+/blog-domain/out/production/classes/
+/blog-keyword/build/
+/build/
+# Project exclude paths
+/blog-api/out/

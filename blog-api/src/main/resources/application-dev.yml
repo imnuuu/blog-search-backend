@@ -1,0 +1,15 @@
+spring:
+  security:
+    allowed-origin: ${ALLOWED_ORIGIN}
+    csrf:
+      enabled: false
+    hsts:
+      enabled: true
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: BASIC
+logging:
+  level:
+    com.kakao.blog: DEBUG

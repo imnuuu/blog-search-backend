@@ -1,0 +1,16 @@
+spring:
+  security:
+    allowed-origin: ${ALLOWED_ORIGIN:http://localhost:3000}
+    csrf:
+      enabled: false
+    hsts:
+      enabled: true
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
+logging:
+  level:
+    org.springframework.security: DEBUG
+    com.kakao.blog: DEBUG

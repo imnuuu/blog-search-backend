@@ -1,0 +1,5 @@
+rootProject.name = 'blog-search-backend'
+include 'blog-api'
+include 'blog-domain'
+include 'blog-keyword'
+
