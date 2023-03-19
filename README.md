@@ -1,24 +1,24 @@
-#블로그 검색 서비스
+# 블로그 검색 서비스
 ---
 
-##실행
+## 실행
 1. rabbitMq 실행
-  -  localhost:5672, guest, guest
-  -  queue : blog-keyword
-  -  exchange: blog-keyword.exchange
-  -  routing key: blog-keyword.routing.#
+    *  localhost:5672, guest, guest
+    *  queue : blog-keyword
+    *  exchange: blog-keyword.exchange
+    *  routing key: blog-keyword.routing.#
 2. H2 DB: SCHEMA=BLOG_SERVICE
 3. jar 실행
 > java -jar ./blog-api-1.0-SNAPSHOT.jar 
 > java -jar ./blog-keyword-1.0-SNAPSHOT.jar
 
-##api 명세
+## api 명세
 1. 블로그 검색
 > curl -X GET http://localhost:8084/api/v1/blog/search?keyword=test&&sort=&&page&&size=
 2. 키워드 top N 조회(default=10)
 > curl -X GET http://localhost:8085/api/v1/keyword/top?limit=10
 
-##dependency
+## dependency
 - H2 1.4.199
 - RabbitMQ 3.11.10
 - flyway 7.15.0
