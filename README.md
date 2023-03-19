@@ -3,6 +3,10 @@
 
 ##실행
 1. rabbitMq 실행
+  -  localhost:5672, guest, guest
+  -  queue : blog-keyword
+  -  exchange: blog-keyword.exchange
+  -  routing key: blog-keyword.routing.#
 2. H2 DB: SCHEMA=BLOG_SERVICE
 3. jar 실행
 > java -jar ./blog-api-1.0-SNAPSHOT.jar 
